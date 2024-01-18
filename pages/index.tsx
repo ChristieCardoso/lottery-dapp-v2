@@ -303,7 +303,7 @@ const Home: NextPage = () => {
 
         {/* The Next Draw Box*/}
         <div className="text-white text-center mt-5 px-5 py-3 rounded-md border-emerald-300/20 border">
-          <h2 className="font-bold">Controls</h2>
+          <h2 className="font-bold mb-2">Controls</h2>
 
           <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
             <button onClick={clickDrawWinner} className="admin-button">
