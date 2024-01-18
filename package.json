@@ -1,0 +1,36 @@
+{
+  "name": "lottery-dapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "next build && next export && npx thirdweb@latest upload out"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.1",
+    "@thirdweb-dev/react": "^4",
+    "@thirdweb-dev/sdk": "^4",
+    "ethers": "^5",
+    "next": "^13",
+    "react": "^18.2",
+    "react-countdown": "^2.3.5",
+    "react-dom": "^18.2",
+    "react-fast-marquee": "^1.6.2",
+    "react-hot-toast": "^2.4.1",
+    "react-spinners": "^0.13.8"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11",
+    "@types/react": "^18",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.29.0",
+    "eslint-config-next": "^13",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^4.9.4"
+  }
+}
