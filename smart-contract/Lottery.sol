@@ -75,7 +75,7 @@ contract Lottery {
         }
     }
 
-    function DrawWinnerTicket() public isOperator {
+    function DrawWinnerTicket() public {
         // Verifica se algum bilhete foi comprado
         require(tickets.length > 0, "Nenhum bilhete foi comprado");
 
@@ -99,7 +99,7 @@ contract Lottery {
     }
 
 
-    function restartDraw() public isOperator {
+    function restartDraw() public {
         // Verifica se não há nenhum bilhete comprado
         require(tickets.length == 0, "It is not possible to restart the draw while it is in progress");
 

@@ -179,7 +179,7 @@ const Home: NextPage = () => {
       });
     } catch (err) {
       // Exibe uma mensagem de erro em caso de falha na chamada do contrato
-      toast.error("Whoops Something went wrong!", {
+      toast.error("No tickets were purchased!", {
         id: notification,
       });
       console.log("Contract Call Failure: ", err);
@@ -219,7 +219,7 @@ const Home: NextPage = () => {
       console.info("contract call success!", data);
     } catch (err) {
       // Exibe uma mensagem de erro em caso de falha na chamada do contrato
-      toast.error("Whoops Something went wrong!", {
+      toast.error("Please wait until the time expires!", {
         id: notification,
       });
       console.error("Contract Call Failure: ", err);
@@ -284,6 +284,26 @@ const Home: NextPage = () => {
           </div>
         )}
 
+        <div className="text-white space-y-2  text-center mt-5 px-5 py-3">
+          <h2 className="font-bold mb-2">Controls</h2>
+
+          <div className="flex justify-center flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+            <button onClick={clickDrawWinner} className="admin-button">
+              <StarIcon className="h-6 mx-auto mb-2" />
+              Draw Winner
+            </button>
+
+            <button onClick={onRestartDraw} className="admin-button">
+              <ArrowPathIcon className="h-6 mx-auto mb-2" />
+              Restart Draw
+            </button>
+            <button onClick={onRefundAll} className="admin-button">
+              <ArrowUturnDownIcon className="h-6 mx-auto mb-2" />
+              Refund ALL
+            </button>
+          </div>
+        </div>
+
         {winnings > 0 && (
           <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto mt-5">
             <button
@@ -302,25 +322,7 @@ const Home: NextPage = () => {
         )}
 
         {/* The Next Draw Box*/}
-        <div className="text-white text-center mt-5 px-5 py-3 rounded-md border-emerald-300/20 border">
-          <h2 className="font-bold mb-2">Controls</h2>
 
-          <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-            <button onClick={clickDrawWinner} className="admin-button">
-              <StarIcon className="h-6 mx-auto mb-2" />
-              Draw Winner
-            </button>
-
-            <button onClick={onRestartDraw} className="admin-button">
-              <ArrowPathIcon className="h-6 mx-auto mb-2" />
-              Restart Draw
-            </button>
-            <button onClick={onRefundAll} className="admin-button">
-              <ArrowUturnDownIcon className="h-6 mx-auto mb-2" />
-              Refund ALL
-            </button>
-          </div>
-        </div>
         <div className="space-y-5 md:space-y-0 m-5 md:flex md:flex-row items-start justify-center md:space-x-5">
           <div className="stats-container">
             <h1 className="text-5x1 text-white font-semibold text-center">
