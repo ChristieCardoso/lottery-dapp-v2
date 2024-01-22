@@ -1,3 +1,4 @@
+import React from "react";
 import {
   ThirdwebProvider,
   ConnectWallet,
@@ -7,8 +8,6 @@ import {
   localWallet,
   embeddedWallet,
 } from "@thirdweb-dev/react";
-
-import React from "react";
 
 function BtnWalletConnect() {
   return (
@@ -27,8 +26,7 @@ function BtnWalletConnect() {
           },
         }),
       ]}
-    >
-    
+    >    
       <ConnectWallet theme={"dark"} modalSize={"wide"} />
     </ThirdwebProvider>
   );
